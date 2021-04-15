@@ -31,7 +31,7 @@ fluidPage(
       #             inline = TRUE),
       radioButtons('format', 'Document format', c('HTML'),
                    inline = TRUE),
-      helpText("Start by clicking the", strong("Make Case Study"), "button to download an example lesson.", style="color:red"),
+      helpText("Start by clicking the", strong("Make Case Study"), "button to download an example lesson.", style="color:#FF7F50"),
       downloadButton('downloadReport', label = 'Make Case Study'),
       tags$hr(),
       helpText("Delete and replace the contents for your own content and press the",
