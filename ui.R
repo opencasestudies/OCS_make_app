@@ -18,9 +18,10 @@ fluidPage(
   sidebarLayout(
     sidebarPanel(
 
-      helpText("This tool is provided to help you create online lessons", strong("quickly and easily"), "like our", 
+      helpText("This tool is provided to help users create online lessons", em(strong("quickly and easily")), "like our", 
                tags$a(href="https://www.opencasestudies.org/", "open case studies"), 
-               ", which are online step-by-step lessons that guide users through a", strong("real-world problem solving challenge"), " ."),
+               ", which are online step-by-step lessons that guide users through a", 
+               strong("real-world problem solving challenge"), " ."),
       tags$hr(),
       textInput("logo", "Logo Image URL", "https://opencasestudies.github.io/img/logo.jpg"),
       textInput("title", "Title", "Gram Negative Vs Gram Positive Bacteria"),
@@ -28,10 +29,15 @@ fluidPage(
       #             inline = TRUE),
       radioButtons('format', 'Document format', c('HTML'),
                    inline = TRUE),
+      helpText("Click the", strong("Download"), "button to see an example of how you can copy 
+      paste text and links to create a lesson."),
       downloadButton('downloadReport'),
+      tags$hr(),
+      helpText("Delete and replace the contents for your own content and press the",
+               strong("Download"), "button again."),
+      tags$hr(),
       tags$h6( "Powered by:"),
-      tags$img(src= 'Rlogo.png'),
-      tags$a(href="https://www.r-project.org/", "www.r-project.org")
+      tags$a(href="https://www.r-project.org/", tags$img(src= 'Rlogo.png'))
     ),
     mainPanel(
       fileInput("data", "Choose data files", multiple = TRUE),
