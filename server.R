@@ -21,7 +21,8 @@ function(input, output) {
    # imageUrl = "https://opencasestudies.github.io/img/logo.jpg",
    animation = TRUE
  )
- # creating using Dean Attali's code https://daattali.com/shiny/shinyalert-demo/
+ # createdusing Dean Attali's code https://daattali.com/shiny/shinyalert-demo/
+ 
  output$value <- renderText({ input$logo
  })
   

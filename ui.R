@@ -12,6 +12,7 @@ library(shiny)
 library(openintro)
 library(shinythemes)
 library(shinyalert)
+
 fluidPage(
   #theme = shinytheme("cerulean"),
   useShinyalert(),
