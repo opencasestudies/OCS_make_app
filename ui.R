@@ -11,8 +11,10 @@
 library(shiny)
 library(openintro)
 library(shinythemes)
+library(shinyalert)
 fluidPage(
   #theme = shinytheme("cerulean"),
+  useShinyalert(),
   theme = shinytheme("flatly"),
   headerPanel("Create an Online Case Study"),
   sidebarLayout(
@@ -28,11 +30,11 @@ fluidPage(
       #             inline = TRUE),
       radioButtons('format', 'Document format', c('HTML'),
                    inline = TRUE),
-      helpText("Start by clicking the", strong("Make Case Study"), "button to download an example lesson."),
+      helpText("Start by clicking the", strong("Make Case Study"), "button to download an example lesson.", style="color:red"),
       downloadButton('downloadReport', label = 'Make Case Study'),
       tags$hr(),
       helpText("Delete and replace the contents for your own content and press the",
-               strong("Make Case Study"), "button again."),
+               strong("Make Case Study"), "button again to download your own lesson!", style="color:green"),
       tags$hr(),
       tags$h6( "Powered by:"),
       tags$a(href="https://www.r-project.org/", tags$img(src= 'Rlogo.png'))
