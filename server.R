@@ -4,7 +4,7 @@ function(input, output) {
   
  output$value <-renderText({input$mainimage
   })
- 
+
  output$value <- renderText({ input$logo
  })
   

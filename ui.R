@@ -17,11 +17,10 @@ fluidPage(
   headerPanel("Create an Online Case Study"),
   sidebarLayout(
     sidebarPanel(
-
       helpText("This tool is provided to help users create online lessons", em(strong("quickly and easily")), "like our", 
                tags$a(href="https://www.opencasestudies.org/", "open case studies"), 
                ", which are online step-by-step lessons that guide users through a", 
-               strong("real-world problem solving challenge"), " ."),
+               strong("real-world problem solving challenge"), "."),
       tags$hr(),
       textInput("logo", "Logo Image URL", "https://opencasestudies.github.io/img/logo.jpg"),
       textInput("title", "Title", "Gram Negative Vs Gram Positive Bacteria"),
@@ -29,19 +28,20 @@ fluidPage(
       #             inline = TRUE),
       radioButtons('format', 'Document format', c('HTML'),
                    inline = TRUE),
-      helpText("Click the", strong("Download"), "button to see an example of how you can copy 
-      paste text and links to create a lesson."),
-      downloadButton('downloadReport'),
+      helpText("Start by clicking the", strong("Make Case Study"), "button to download an example lesson."),
+      downloadButton('downloadReport', label = 'Make Case Study'),
       tags$hr(),
       helpText("Delete and replace the contents for your own content and press the",
-               strong("Download"), "button again."),
+               strong("Make Case Study"), "button again."),
       tags$hr(),
       tags$h6( "Powered by:"),
       tags$a(href="https://www.r-project.org/", tags$img(src= 'Rlogo.png'))
     ),
     mainPanel(
-      fileInput("data", "Choose data files", multiple = TRUE),
-      textInput("mainimage", "Type Main Image URL", "https://thisonevsthatone.com/wp-content/uploads/Gram-positive-vs-Gram-negative.webp"),
+      tags$img(src= 'sam_comp.jpg', height = 200),
+      tags$h6("Photo by", tags$a(href="https://unsplash.com/@samich_18?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText", "Samantha Borges on unsplash")),
+      #fileInput("data", "Choose data files", multiple = TRUE),
+      textInput("mainimage", "Main Image URL", "https://thisonevsthatone.com/wp-content/uploads/Gram-positive-vs-Gram-negative.webp"),
   
       textInput("header1", "Header1", "Gram-positive vs Gram-negative, what’s the difference??"),
       textInput("narrative1", "Narrative Text Section 1", "Gram-positive is a type of bacteria that have a thick, multilayered cell wall and no outer cell membrane. They stain purple when you perform a Gram stain on them.
@@ -52,7 +52,7 @@ One way to help distinguish between the two different types is to associate the 
 
 So gram-positive bacteria stain purple, and gram-negative bacteria do not.
 "),
-      textInput("image1", "Type Image 1 URL", "https://cdn1.byjus.com/wp-content/uploads/2018/11/biology/2018/05/16065016/Difference-between-Gram-positive-and-Gram-negative-Bacteria.png"),
+      textInput("image1", "Image 1 URL", "https://cdn1.byjus.com/wp-content/uploads/2018/11/biology/2018/05/16065016/Difference-between-Gram-positive-and-Gram-negative-Bacteria.png"),
       
       textInput("header2", "Header2", "Gram Stain Method"),
       textInput("narrative2", "Narrative Text Section 2", "During Gram staining both bacteria are stained with a purple dye, but the gram-negative does not retain it. So, you could also associate that concept to their names as well.
@@ -66,9 +66,9 @@ Gram staining was invented by Hans Christian Gram, and it’s sometimes referred
 
 This is incredibly important for treating ailments caused by bacteria. Different bacterial types react in different ways to different treatments, so we need to know the bacterial type to be able to know the best treatment option.
 "),
-      textInput("image2", "Type Image 2 URL", "https://cdn.technologynetworks.com/tn/images/body/g-pos-g-neg-cell-wall-structure-final1566305996142.jpg"),
+      textInput("image2", "Image 2 URL", "https://cdn.technologynetworks.com/tn/images/body/g-pos-g-neg-cell-wall-structure-final1566305996142.jpg"),
       
-      textInput("video", "Type youtube video code", "AZS2wb7pMo4")
+      textInput("video", "youtube video code", "AZS2wb7pMo4")
       
     )
   )
