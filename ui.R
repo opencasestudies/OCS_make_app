@@ -11,23 +11,27 @@
 library(shiny)
 library(openintro)
 library(shinythemes)
-
 fluidPage(
   #theme = shinytheme("cerulean"),
-  theme = shinytheme("darkly"),
-  headerPanel("Create an Online Lesson"),
+  theme = shinytheme("flatly"),
+  headerPanel("Create an Online Case Study"),
   sidebarLayout(
     sidebarPanel(
-      helpText(),
-      textInput("logo", "Type Image URL", "https://opencasestudies.github.io/img/logo.jpg"),
+
+      helpText("This tool is provided to help you create online lessons", strong("quickly and easily"), "like our", 
+               tags$a(href="https://www.opencasestudies.org/", "open case studies"), 
+               ", which are online step-by-step lessons that guide users through a", strong("real-world problem solving challenge"), " ."),
+      tags$hr(),
+      textInput("logo", "Logo Image URL", "https://opencasestudies.github.io/img/logo.jpg"),
       textInput("title", "Title", "Gram Negative Vs Gram Positive Bacteria"),
      # radioButtons('format', 'Document format', c('PDF', 'HTML', 'Word'),
       #             inline = TRUE),
       radioButtons('format', 'Document format', c('HTML'),
                    inline = TRUE),
       downloadButton('downloadReport'),
-      h6( "Powered by:"),
-     tags$img(src= 'RStudio-Ball.png',height =50, width = 50)
+      tags$h6( "Powered by:"),
+      tags$img(src= 'Rlogo.png'),
+      tags$a(href="https://www.r-project.org/", "www.r-project.org")
     ),
     mainPanel(
       fileInput("data", "Choose data files", multiple = TRUE),
