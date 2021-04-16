@@ -25,10 +25,11 @@ fluidPage(
                ", which are online step-by-step lessons that guide users through a", 
                strong("real-world problem solving challenge"), "."),
       tags$hr(),
-      textInput("logo", "Logo Image URL", "https://opencasestudies.github.io/img/logo.jpg"),
-      textInput("title", "Title", "Gram Negative Vs Gram Positive Bacteria"),
+      textInput("logo", "Logo Image URL", "https://opencasestudies.github.io/img/logo.jpg", width = '400px'),
+      textInput("title", "Title", "Gram Negative Vs Gram Positive Bacteria", width = '400px'),
      # radioButtons('format', 'Document format', c('PDF', 'HTML', 'Word'),
       #             inline = TRUE),
+      tags$h1('_______________'),
       radioButtons('format', 'Document format', c('HTML'),
                    inline = TRUE),
       helpText("Start by clicking the", strong("Make Case Study"), "button to download an example lesson.", style="color:#FF7F50"),
@@ -38,13 +39,15 @@ fluidPage(
                strong("Make Case Study"), "button again to download your own lesson!", style="color:#17bc9c"),
       tags$hr(),
       tags$h6( "Powered by:"),
-      tags$a(href="https://www.r-project.org/", tags$img(src= 'Rlogo.png'))
+      tags$a(href="https://www.r-project.org/", tags$img(src= 'Rlogo.png')),
+      tags$h6('Hosted by:'),
+      tags$a(href='https://www.opencasestudies.org/','Open Case Studies',target='_blank'),
     ),
     mainPanel(
       tags$img(src= 'sam_comp.jpg', height = 200),
       tags$h6("Photo by", tags$a(href="https://unsplash.com/@samich_18?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText", "Samantha Borges on unsplash")),
       #fileInput("data", "Choose data files", multiple = TRUE),
-      textInput("mainimage", "Main Image URL", "https://thisonevsthatone.com/wp-content/uploads/Gram-positive-vs-Gram-negative.webp"),
+      textInput("mainimage", "Main Image URL", "https://thisonevsthatone.com/wp-content/uploads/Gram-positive-vs-Gram-negative.webp", width = '400px'),
   
       textInput("header1", "Header1", "Gram-positive vs Gram-negative, what’s the difference??"),
       textInput("narrative1", "Narrative Text Section 1", "Gram-positive is a type of bacteria that have a thick, multilayered cell wall and no outer cell membrane. They stain purple when you perform a Gram stain on them.
