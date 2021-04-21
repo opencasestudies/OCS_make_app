@@ -12,10 +12,7 @@ output:
     theme: cosmo
     toc: yes
     toc_float: yes
-
-
 ---
-
 
 
 <style>
@@ -25,6 +22,7 @@ output:
   padding-top: 240px !important;
   background-repeat: no-repeat;
 }
+
 </style>
 
 <div id="google_translate_element"></div>
@@ -77,11 +75,11 @@ Narrative text block example:
 
 
 ```{r letter-a, echo=FALSE}
- # library(learnr)
- # question("What number is the letter A in the English alphabet?",
- #   answer("8"),
- #   answer("14"),
- #   answer("1", correct = TRUE),
- #   answer("23")
- # )
+#  library(learnr)
+#  question("What number is the letter A in the English alphabet?",
+#    answer("8"),
+#    answer("14"),
+#    answer("1", correct = TRUE),
+#    answer("23")
+#  )
 ```

@@ -68,14 +68,14 @@ function(input, output) {
       file.copy(src, 'report.Rmd', overwrite = TRUE)
       
       library(rmarkdown)
-      #out <- render('report.Rmd')
-      #file.rename(out, file)
-      
-      out <- render('report.Rmd', switch(
-        input$format,
-        PDF = pdf_document(), HTML = html_document(), Word = word_document()
-      ))
+      out <- render('report.Rmd')
       file.rename(out, file)
+      
+      # out <- render('report.Rmd', switch(
+      #   input$format,
+      #   PDF = pdf_document(), HTML = html_document(), Word = word_document()
+      # ))
+      # file.rename(out, file)
     }
   )
   
